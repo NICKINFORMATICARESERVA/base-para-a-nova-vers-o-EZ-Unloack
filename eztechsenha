@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double graus, radianos, cosseno;
+    int resultado;
+
+    printf("Digite um número em graus: ");
+    scanf("%lf", &graus);
+
+    radianos = graus * M_PI / 180;
+    cosseno = cos(radianos);
+    resultado = (int)(cosseno * 1000) % 1000;
+
+    printf("Os 3 números após a vírgula do cosseno de %.2lf graus são: %d\n", graus, resultado);
+
+    return 0;
+}
